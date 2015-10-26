@@ -1,0 +1,71 @@
+<div id="podcast_show">
+	<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @podcast.title%></h1>
+			<p class="description"><%= @podcast.description %></p>
+			<% unless @podcast.itunes.blank? %>
+			  <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+			<% end %>
+			<% unless @podcast.stitcher.blank? %>
+			  <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+			<% end %>
+			<% unless @podcast.podbay.blank? %>
+			  <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+			<% end %>
+		</div>
+	</div>
+
+	<div id="breadcrumb">
+	  <%= link_to podcasts_path do %>
+	    ALL PODCASTS
+			<span>/<span>
+			TED RADIO HOUR
+	  <% end %>
+	</div>
+	
+	<div id="episodes">
+		<div class="wrapper_skinny">
+			<ul class="cf">
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="images/joey.jpg" alt="Joey">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html">Open-Source World</a></h2>
+						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
+					</div>
+				</li>
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="images/chandler.jpg" alt="Chandler">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html">Open-Source World</a></h2>
+						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
+					</div>
+				</li>
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="images/jack.jpg" alt="Jack">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html">Open-Source World</a></h2>
+						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="pagination">
+	<span class="previous_page disabled">Previous</span>
+	<em class="current">1</em>
+	<a href="#">2</a>
+	<a class="next_page" href="#">Next</a>
+</div>
