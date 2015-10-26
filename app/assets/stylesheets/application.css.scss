@@ -110,15 +110,15 @@ body{
 }
 
 .banner_podcasts{
-	background-image:url(../images/banner_podcasts.jpg);
+	background-image:image-url("banner_podcasts.jpg");
 }
 
 .sign-in_banner{
-	background-image:url(../images/sign-in_banner.jpg);
+	background-image:image-url("sign-in_banner.jpg");
 }
 
 .sign-up_banner{
-	background-image:url(../images/sign-up_banner.jpg);
+	background-image:image-url("sign-up_banner.jpg");
 }
 
 
@@ -188,6 +188,6 @@ textarea{
 	padding: 0 0 5rem 0;
 }
 
-//@import 'normalize';
+@import 'normalize';
 @import 'welcome';
-//@import 'podcast';
+@import 'podcast';
