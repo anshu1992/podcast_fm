@@ -26,39 +26,19 @@
 	<div id="episodes">
 		<div class="wrapper_skinny">
 			<ul class="cf">
-				<li class="cf">
-					<div class="episode_thumbnail">
-						<a href="episode.html">
-							<img src="images/joey.jpg" alt="Joey">
-						</a>
-					</div>
-					<div class="episode_overview">
-						<h2><a href="episode.html">Open-Source World</a></h2>
-						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
-					</div>
-				</li>
-				<li class="cf">
-					<div class="episode_thumbnail">
-						<a href="episode.html">
-							<img src="images/chandler.jpg" alt="Chandler">
-						</a>
-					</div>
-					<div class="episode_overview">
-						<h2><a href="episode.html">Open-Source World</a></h2>
-						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
-					</div>
-				</li>
-				<li class="cf">
-					<div class="episode_thumbnail">
-						<a href="episode.html">
-							<img src="images/jack.jpg" alt="Jack">
-						</a>
-					</div>
-					<div class="episode_overview">
-						<h2><a href="episode.html">Open-Source World</a></h2>
-						<p class="description">The era of open-source has led to countless innovations. When does it work and when is it chaos? In this episode, TED speakers explore how open-source is changing how we build, collaborate and govern. </p>
-					</div>
-				</li>
+				<% @episodes.each do |episode| %>
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="#">
+								<img src="images/joey.jpg" alt="Joey">
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+							<p class="description"><%= truncate(episode.description, length: 160) %></p>
+						</div>
+					</li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
